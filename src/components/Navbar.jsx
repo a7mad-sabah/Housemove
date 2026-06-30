@@ -131,7 +131,12 @@ const closeMenu = () => {
                   </div>
                 </div>
               </div>
-
+              <Link
+                to="/Packages"
+                className="font-medium text-gray-700 hover:text-blue-600 transition duration-300"
+              >
+                Packages
+              </Link>
               <Link
                 to="/about"
                 className="font-medium text-gray-700 hover:text-blue-600 transition duration-300"

@@ -8,7 +8,7 @@ import {
   Check,
 } from "lucide-react";
 import Plan from "../pages/Plan";
-
+import Carddetails1 from "../components/Carddetails1"
 export default function OfficeRelocation() {
   return (
     <>
@@ -144,7 +144,7 @@ export default function OfficeRelocation() {
           ↓
         </motion.div>
       </section>
-
+<Carddetails1/>
       <Plan />
     </>
   );

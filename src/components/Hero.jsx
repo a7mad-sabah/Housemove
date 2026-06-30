@@ -69,27 +69,6 @@ export default function Hero() {
             </button>{" "}
           </motion.div>
           {/* Stats */}
-          {/* <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="grid grid-cols-3 gap-4 mt-12"
-          >
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10">
-              <h3 className="text-3xl font-bold text-white">5000+</h3>
-              <p className="text-gray-300 text-sm">Successful Moves</p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10">
-              <h3 className="text-3xl font-bold text-white">10+</h3>
-              <p className="text-gray-300 text-sm">Years Experience</p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10">
-              <h3 className="text-3xl font-bold text-white">4.9★</h3>
-              <p className="text-gray-300 text-sm">Customer Rating</p>
-            </div>
-          </motion.div> */}
         </div>
       </div>
       {/* Scroll Indicator */}

@@ -8,6 +8,7 @@ import {
   Check,
 } from "lucide-react";
 import Plan from "../pages/Plan";
+import Carddetails from "../components/Carddetails";
 
 export default function HouseRemovals() {
   return (
@@ -154,7 +155,7 @@ export default function HouseRemovals() {
           ↓
         </motion.div>
       </section>
-
+<Carddetails/>
       <Plan />
     </>
   );
