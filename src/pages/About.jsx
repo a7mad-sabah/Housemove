@@ -26,7 +26,7 @@ export default function About() {
       desc: "Always arriving on schedule with professional planning.",
     },
   ];
-// Hello
+
   const stats = [
     { number: "1500+", text: "Happy Clients" },
     { number: "8+", text: "Years Experience" },
