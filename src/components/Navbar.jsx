@@ -116,7 +116,7 @@ const closeMenu = () => {
                       </p>
                     </Link>
 
-                    <Link
+                    {/* <Link
                       to="/packages"
                       className="block p-3 rounded-xl hover:bg-blue-50 transition"
                     >
@@ -127,7 +127,7 @@ const closeMenu = () => {
                       <p className="text-sm text-gray-500">
                         Secure package transport
                       </p>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>

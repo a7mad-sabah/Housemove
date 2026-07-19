@@ -1,139 +1,162 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, User } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section className="bg-slate-50 min-h-screen">
+    <section className="bg-slate-950 text-white overflow-hidden">
       {/* Hero */}
-      <div className="relative bg-gradient-to-r from-blue-700 to-cyan-500 py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative py-36">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-700 via-cyan-600 to-slate-900"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 text-center text-white">
+        {/* Blur Circles */}
+        <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-[150px]" />
+
+        <div className="relative max-w-7xl mx-auto px-6 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="text-5xl font-bold"
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-6xl md:text-7xl font-bold"
           >
             Contact Us
           </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mt-5 text-lg max-w-2xl mx-auto text-gray-200"
-          >
-            Have questions? Need a moving quote? We're always ready to help you.
-          </motion.p>
+          <p className="mt-6 text-slate-200 max-w-2xl mx-auto text-lg">
+            Get in touch with our moving experts. We're ready to help make your
+            move smooth and stress-free.
+          </p>
         </div>
-      </div>
+      </section>
 
-      {/* Contact */}
+      {/* Main Section */}
       <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16">
-        {/* Left */}
-
+        {/* Left Side */}
         <motion.div
-          initial={{ opacity: 0, x: -60 }}
+          initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Let's Talk</h2>
+          <span className="text-cyan-400 font-semibold uppercase">
+            Contact Information
+          </span>
 
-          <p className="text-gray-600 mb-10 leading-8">
-            Contact us anytime. Whether you're moving your home, office, or
-            furniture, our professional team is ready to help.
+          <h2 className="text-5xl font-bold mt-4 leading-tight">
+            Let's Discuss Your Move
+          </h2>
+
+          <p className="text-slate-400 mt-6 leading-8">
+            Whether you're moving home, office, or furniture, our professional
+            team is always available to answer your questions.
           </p>
 
-          <div className="space-y-6">
-            <div className="flex gap-5 p-6 rounded-2xl bg-white shadow-lg">
-              <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center">
-                <Phone className="text-blue-600" />
-              </div>
+          <div className="grid sm:grid-cols-2 gap-6 mt-12">
+            {[
+              {
+                icon: Phone,
+                title: "Phone",
+                text: "+964 750 123 4567",
+              },
+              {
+                icon: Mail,
+                title: "Email",
+                text: "info@moving.com",
+              },
+              {
+                icon: MapPin,
+                title: "Address",
+                text: "Sulaymaniyah, Iraq",
+              },
+              {
+                icon: Clock,
+                title: "Working Hours",
+                text: "Sat - Thu | 8 AM - 7 PM",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ y: -8 }}
+                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-cyan-500/20 flex items-center justify-center mb-5">
+                  <item.icon className="text-cyan-400" />
+                </div>
 
-              <div>
-                <h3 className="font-semibold text-xl">Phone</h3>
+                <h3 className="font-semibold text-xl">{item.title}</h3>
 
-                <p className="text-gray-500">+964 750 123 4567</p>
-              </div>
-            </div>
-
-            <div className="flex gap-5 p-6 rounded-2xl bg-white shadow-lg">
-              <div className="w-14 h-14 rounded-xl bg-cyan-100 flex items-center justify-center">
-                <Mail className="text-cyan-600" />
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-xl">Email</h3>
-
-                <p className="text-gray-500">info@moving.com</p>
-              </div>
-            </div>
-
-            <div className="flex gap-5 p-6 rounded-2xl bg-white shadow-lg">
-              <div className="w-14 h-14 rounded-xl bg-green-100 flex items-center justify-center">
-                <MapPin className="text-green-600" />
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-xl">Address</h3>
-
-                <p className="text-gray-500">Sulaymaniyah, Kurdistan, Iraq</p>
-              </div>
-            </div>
-
-            <div className="flex gap-5 p-6 rounded-2xl bg-white shadow-lg">
-              <div className="w-14 h-14 rounded-xl bg-orange-100 flex items-center justify-center">
-                <Clock className="text-orange-600" />
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-xl">Working Hours</h3>
-
-                <p className="text-gray-500">Sat - Thu</p>
-
-                <p className="text-gray-500">8:00 AM - 7:00 PM</p>
-              </div>
-            </div>
+                <p className="text-slate-400 mt-2">{item.text}</p>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 
-        {/* Right */}
-
+        {/* Form */}
         <motion.div
-          initial={{ opacity: 0, x: 60 }}
+          initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
         >
-          <div className="bg-white shadow-2xl rounded-3xl p-10">
-            <h2 className="text-3xl font-bold mb-8">Send Message</h2>
+          <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[35px] p-10 shadow-2xl">
+            <h2 className="text-4xl font-bold mb-8">Send Message</h2>
 
             <form className="space-y-6">
-              <input
-                type="text"
-                placeholder="Full Name"
-                className="w-full p-4 rounded-xl border outline-none focus:ring-2 focus:ring-blue-500"
-              />
+              <div className="relative">
+                <User
+                  className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-500"
+                  size={20}
+                />
 
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full p-4 rounded-xl border outline-none focus:ring-2 focus:ring-blue-500"
-              />
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  className="w-full bg-slate-900/70 border border-slate-800 rounded-2xl py-4 pl-14 pr-5 outline-none focus:border-cyan-500"
+                />
+              </div>
 
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                className="w-full p-4 rounded-xl border outline-none focus:ring-2 focus:ring-blue-500"
-              />
+              <div className="relative">
+                <Mail
+                  className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-500"
+                  size={20}
+                />
+
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="w-full bg-slate-900/70 border border-slate-800 rounded-2xl py-4 pl-14 pr-5 outline-none focus:border-cyan-500"
+                />
+              </div>
+
+              <div className="relative">
+                <Phone
+                  className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-500"
+                  size={20}
+                />
+
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  className="w-full bg-slate-900/70 border border-slate-800 rounded-2xl py-4 pl-14 pr-5 outline-none focus:border-cyan-500"
+                />
+              </div>
 
               <textarea
                 rows="6"
-                placeholder="Your Message"
-                className="w-full p-4 rounded-xl border outline-none resize-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Write your message..."
+                className="w-full bg-slate-900/70 border border-slate-800 rounded-2xl p-5 outline-none resize-none focus:border-cyan-500"
               />
 
-              <button className="flex items-center justify-center gap-3 w-full bg-blue-600 hover:bg-blue-700 transition text-white py-4 rounded-xl font-semibold">
+              <button
+                className="
+                w-full py-4 rounded-2xl
+                bg-gradient-to-r from-cyan-500 to-blue-600
+                hover:scale-[1.02]
+                transition-all duration-300
+                flex items-center justify-center gap-3
+                font-semibold text-lg
+              "
+              >
                 <Send size={20} />
                 Send Message
               </button>
@@ -143,16 +166,18 @@ const Contact = () => {
       </div>
 
       {/* Map */}
-
       <div className="max-w-7xl mx-auto px-6 pb-24">
-        <div className="rounded-3xl overflow-hidden shadow-xl">
+        <motion.div
+          whileHover={{ scale: 1.01 }}
+          className="rounded-[40px] overflow-hidden border border-white/10 shadow-2xl"
+        >
           <iframe
             title="Google Map"
             src="https://maps.google.com/maps?q=Sulaymaniyah&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            className="w-full h-[500px]"
+            className="w-full h-[550px]"
             loading="lazy"
-          ></iframe>
-        </div>
+          />
+        </motion.div>
       </div>
     </section>
   );
